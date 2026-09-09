@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adriana Enge — Product Leader</title>
+<meta name="description" content="Product portfolio of Adriana Enge — data-driven product leader, case studies in AI-augmented delivery and logistics optimization.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF0F2;
+    --paper-deep:#E3E7EA;
+    --ink:#10161B;
+    --teal:#146B70;
+    --teal-deep:#0E4F53;
+    --amber:#C98B2E;
+    --muted:#55636B;
+    --line:#C7CED2;
+    --max:760px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+
+  a{color:var(--teal-deep);}
+  a:hover{color:var(--amber);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--teal); outline-offset:3px;}
+
+  .wrap{
+    max-width: 1180px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 220px 1fr;
+    gap:0 48px;
+    padding: 0 32px;
+  }
+
+  /* ---------- index rail ---------- */
+  nav.index{
+    position:sticky;
+    top:56px;
+    align-self:start;
+    padding-top:96px;
+    font-size:14px;
+  }
+  nav.index .label{
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:14px;
+    letter-spacing:0.02em;
+  }
+  nav.index ol{
+    list-style:none;
+    margin:0; padding:0;
+    border-left:1px solid var(--line);
+  }
+  nav.index li{margin:0;}
+  nav.index a{
+    display:block;
+    padding:9px 0 9px 16px;
+    color:var(--muted);
+    text-decoration:none;
+    border-left:2px solid transparent;
+    margin-left:-1px;
+    transition:color .15s ease, border-color .15s ease;
+  }
+  nav.index a:hover{color:var(--ink);}
+  nav.index a.active{
+    color:var(--teal-deep);
+    border-left-color:var(--teal);
+    font-weight:500;
+  }
+
+  main{min-width:0; padding-bottom:80px;}
+
+  section{
+    max-width:var(--max);
+    padding-top:96px;
+  }
+  section:first-of-type{padding-top:64px;}
+
+  /* ---------- hero ---------- */
+  .hero h1{font-size:52px; line-height:1.05;}
+  .hero .role{
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:18px;
+    color:var(--muted);
+    margin-top:10px;
+  }
+  .hero .dek{
+    margin-top:22px;
+    font-size:18px;
+    max-width:640px;
+  }
+  .hero .meta{
+    margin-top:22px;
+    font-size:14px;
+    color:var(--muted);
+  }
+  .hero .meta a{margin-right:18px;}
+
+  .readout{
+    margin-top:44px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .readout div{
+    padding:18px 18px 18px 0;
+    border-right:1px solid var(--line);
+  }
+  .readout div:last-child{border-right:none;}
+  .readout .num{
+    font-family:'Fraunces', serif;
+    font-size:28px;
+    color:var(--teal-deep);
+  }
+  .readout .cap{
+    font-size:13px;
+    color:var(--muted);
+    margin-top:4px;
+  }
+
+  /* ---------- about ---------- */
+  .kicker{
+    font-size:13px;
+    color:var(--teal-deep);
+    margin-bottom:10px;
+  }
+  section h2{font-size:30px;}
+  .about p{margin-top:16px; max-width:640px;}
+  .skills{
+    margin-top:26px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+  }
+  .skills span{
+    font-size:13px;
+    padding:6px 12px;
+    border:1px solid var(--line);
+    border-radius:3px;
+    color:var(--muted);
+    background:var(--paper-deep);
+  }
+
+  /* ---------- case studies ---------- */
+  .case-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+  }
+  .case-head .idx{
+    font-family:'Fraunces', serif;
+    font-size:16px;
+    color:var(--amber);
+  }
+  .case-sub{
+    color:var(--muted);
+    font-size:15px;
+    margin-top:8px;
+  }
+
+  .metrics-strip{
+    margin:32px 0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:0;
+    background:var(--ink);
+    color:var(--paper);
+    border-radius:2px;
+  }
+  .metrics-strip div{
+    flex:1 1 140px;
+    padding:18px 20px;
+    border-right:1px solid rgba(255,255,255,0.14);
+  }
+  .metrics-strip div:last-child{border-right:none;}
+  .metrics-strip .num{
+    font-family:'Fraunces', serif;
+    font-size:22px;
+    color:#fff;
+  }
+  .metrics-strip .cap{
+    font-size:12.5px;
+    color:#B9C4C6;
+    margin-top:3px;
+  }
+
+  .field{margin-top:34px;}
+  .field h3{
+    font-size:14px;
+    font-family:'IBM Plex Sans', sans-serif;
+    font-weight:600;
+    color:var(--teal-deep);
+    text-transform:none;
+    border-bottom:1px solid var(--line);
+    padding-bottom:8px;
+    margin-bottom:14px;
+  }
+  .field p{margin:0 0 12px;}
+  .field ul{margin:0; padding-left:20px;}
+  .field li{margin-bottom:8px;}
+
+  .shot{
+    margin:22px 0;
+    border:1.5px dashed var(--line);
+    border-radius:4px;
+    padding:34px 20px;
+    text-align:center;
+    color:var(--muted);
+    font-size:13.5px;
+    background:rgba(255,255,255,0.35);
+  }
+  .shot strong{display:block; color:var(--ink); font-size:14px; margin-bottom:4px; font-weight:600;}
+
+  /* ---------- experience ---------- */
+  .xp-item{
+    padding:18px 0;
+    border-top:1px solid var(--line);
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    gap:18px;
+  }
+  .xp-item:last-child{border-bottom:1px solid var(--line);}
+  .xp-dates{font-size:13px; color:var(--muted); padding-top:2px;}
+  .xp-role{font-weight:600;}
+  .xp-co{color:var(--muted); font-size:15px;}
+
+  /* ---------- contact ---------- */
+  .contact-box{
+    margin-top:20px;
+    padding:28px;
+    background:var(--paper-deep);
+    border-radius:4px;
+  }
+  .contact-box a{
+    display:inline-block;
+    margin-top:10px;
+    font-size:15px;
+  }
+
+  footer{
+    max-width:var(--max);
+    padding:40px 0 60px;
+    font-size:13px;
+    color:var(--muted);
+  }
+
+  @media (max-width: 880px){
+    .wrap{grid-template-columns:1fr; padding:0 20px;}
+    nav.index{
+      position:static;
+      padding-top:24px;
+      margin-bottom:8px;
+    }
+    nav.index ol{
+      border-left:none;
+      display:flex;
+      flex-wrap:wrap;
+      gap:4px 16px;
+      border-bottom:1px solid var(--line);
+      padding-bottom:12px;
+    }
+    nav.index a{padding:4px 0; border-left:none;}
+    nav.index a.active{border-left:none; text-decoration:underline;}
+    .hero h1{font-size:38px;}
+    .readout{grid-template-columns:1fr 1fr;}
+    .readout div:nth-child(2n){border-right:none;}
+    section{padding-top:64px;}
+    .xp-item{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav class="index" aria-label="Section index">
+    <div class="label">Index</div>
+    <ol>
+      <li><a href="#about" data-sec="about">Overview</a></li>
+      <li><a href="#case-konars" data-sec="case-konars">Case 01 — Konars</a></li>
+      <li><a href="#case-efishery" data-sec="case-efishery">Case 02 — eFishery</a></li>
+      <li><a href="#experience" data-sec="experience">Experience</a></li>
+      <li><a href="#contact" data-sec="contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <section class="hero" id="top">
+      <h1>Adriana Enge</h1>
+      <div class="role">Product Leader — Platform Strategy &amp; Data-Driven Growth</div>
+      <p class="dek">I turn messy operational and financial data into clear product decisions — building platforms that work for people who've never had digital tools built for them before.</p>
+      <div class="meta">
+        <a href="mailto:adriana.enge@gmail.com">adriana.enge@gmail.com</a>
+        <a href="https://linkedin.com/in/adrianaenge" target="_blank" rel="noopener">LinkedIn</a>
+        <span>Indonesia</span>
+      </div>
+
+      <div class="readout">
+        <div>
+          <div class="num">200K+</div>
+          <div class="cap">business operators served on platforms I've built or led</div>
+        </div>
+        <div>
+          <div class="num">~IDR 1B+</div>
+          <div class="cap">in monthly transaction value across two platforms</div>
+        </div>
+        <div>
+          <div class="num">6+ yrs</div>
+          <div class="cap">building B2C products across fintech, logistics &amp; ops</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="kicker">Overview</div>
+      <h2>Product leadership, grounded in data</h2>
+      <div class="about">
+        <p>I've spent six years building and scaling B2C platforms — most recently leading product strategy for a multi-sided logistics and operations platform at eFishery, and before that shipping a fintech product from 0 to 1. My strongest work happens when a business is drowning in operational complexity and needs someone to turn it into a clear, measurable system.</p>
+        <p>The two case studies below are the ones I'm proudest of: one shows how I use AI to compress research and build cycles from months to weeks; the other shows how I use data to fix expensive, invisible operational problems.</p>
+      </div>
+      <div class="skills">
+        <span>Product Strategy &amp; Roadmapping</span>
+        <span>AI-Augmented Product Development</span>
+        <span>Data-Driven Decision Making</span>
+        <span>Product Analytics</span>
+        <span>Cross-Functional Leadership</span>
+        <span>Stakeholder Management</span>
+        <span>User Research</span>
+        <span>UX Design</span>
+      </div>
+    </section>
+
+    <section id="case-konars">
+      <div class="case-head"><span class="idx">Case 01</span></div>
+      <h2>Building an ERP from scratch, with AI as the accelerant</h2>
+      <div class="case-sub">Konars Group — Architecture &amp; Construction · Aug 2025 – Present</div>
+
+      <div class="metrics-strip">
+        <div><div class="num">1 month</div><div class="cap">from research to shipped product</div></div>
+        <div><div class="num">1 engineer</div><div class="cap">on the build</div></div>
+        <div><div class="num">50%</div><div class="cap">less time spent on research &amp; PRD drafting</div></div>
+        <div><div class="num">~IDR 1B/mo</div><div class="cap">now processed through the system</div></div>
+      </div>
+
+      <div class="field">
+        <h3>Problem</h3>
+        <p>Konars ran its entire transaction process manually in Excel — no shared system, no real-time visibility, reconciliation that depended on people cross-checking spreadsheets by hand. Off-the-shelf ERP tools existed, but they were the wrong fit on two fronts at once: too complex for a team with no prior digital workflow, and too expensive to justify at this scale. Buying a tool meant forcing the team to adapt to the software. I chose to build a system that adapted to the team instead.</p>
+      </div>
+
+      <div class="field">
+        <h3>Approach</h3>
+        <ul>
+          <li><strong>Compressed research with AI.</strong> I used Claude to synthesize interviews and workflow observations with finance and ops staff — mapping exactly how they used Excel day to day, where errors crept in, and where reconciliation broke down. This cut research and PRD drafting time by roughly half.</li>
+          <li><strong>Validated before building anything.</strong> A self-hosted working prototype went in front of the team within the first two weeks — before development started in earnest, so the build was shaped by real reactions, not assumptions.</li>
+          <li><strong>Scoped ruthlessly.</strong> With one engineer and a month on the clock, I prioritized the core transaction workflow end-to-end over breadth — deliberately leaving advanced reporting and integrations for a later phase.</li>
+        </ul>
+      </div>
+
+      <div class="shot">
+        <strong>Add screenshot: before / after</strong>
+        Old Excel-based tracking sheet next to the shipped ERP interface — the contrast is the whole story here.
+      </div>
+
+      <div class="field">
+        <h3>Outcome</h3>
+        <p>Shipped in one month with a single engineer. The system now processes roughly IDR 1 billion a month in transactions that were previously tracked entirely by hand — replacing manual reconciliation with a system built around how the team already worked, not how a generic ERP assumed they should.</p>
+      </div>
+    </section>
+
+    <section id="case-efishery">
+      <div class="case-head"><span class="idx">Case 02</span></div>
+      <h2>Replacing gut-feel logistics with a data-driven system</h2>
+      <div class="case-sub">eFishery — Group Leader of Product Manager · Oct 2023 – Feb 2025</div>
+
+      <div class="metrics-strip">
+        <div><div class="num">300M+ IDR</div><div class="cap">cut from logistics costs</div></div>
+        <div><div class="num">350M+ IDR/mo</div><div class="cap">reduction in stock losses</div></div>
+        <div><div class="num">&lt;2%</div><div class="cap">fulfillment error rate</div></div>
+        <div><div class="num">+3%</div><div class="cap">margin improvement</div></div>
+      </div>
+
+      <div class="field">
+        <h3>Problem</h3>
+        <p>eFishery's platform coordinated operations, warehousing, and logistics across a large B2C network — but routing and inventory decisions were made without shared, real-time data. Teams were operating reactively: fulfillment errors and stock problems surfaced after they'd already cost money, because no one had visibility into the full picture until it was too late.</p>
+      </div>
+
+      <div class="field">
+        <h3>Approach</h3>
+        <ul>
+          <li><strong>Built shared visibility first.</strong> I defined platform-level KPIs and data instrumentation standards across teams — real-time fulfillment error rates, stock-out frequency by warehouse, routing cost per delivery — giving every team a common source of truth for the first time.</li>
+          <li><strong>Modeled demand instead of reacting to it.</strong> Using historical sales and regional demand patterns, I built forecasting models that let routing and inventory planning happen ahead of problems rather than in response to them.</li>
+          <li><strong>Redesigned sourcing with Pricing &amp; Ops.</strong> The same data fed into a reworked sourcing model — changing supplier selection and order timing to directly improve margins.</li>
+        </ul>
+      </div>
+
+      <div class="shot">
+        <strong>Add screenshot: KPI dashboard</strong>
+        A simplified view of the instrumentation/KPI framework you introduced — makes the "no visibility before" claim visible.
+      </div>
+
+      <div class="field">
+        <h3>Outcome</h3>
+        <p>Logistics costs down by 300M+ IDR, stock losses down 350M+ IDR a month, fulfillment errors held under 2%, and margins up 3% through the sourcing redesign — all built on a KPI framework that didn't exist before this work.</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="kicker">Experience</div>
+      <h2>Where I've worked</h2>
+
+      <div class="xp-item">
+        <div class="xp-dates">Aug 2025 – Present</div>
+        <div>
+          <div class="xp-role">Product Consultant (Contract)</div>
+          <div class="xp-co">Konars Group</div>
+        </div>
+      </div>
+      <div class="xp-item">
+        <div class="xp-dates">Oct 2023 – Feb 2025</div>
+        <div>
+          <div class="xp-role">Group Leader of Product Manager</div>
+          <div class="xp-co">eFishery</div>
+        </div>
+      </div>
+      <div class="xp-item">
+        <div class="xp-dates">Jan 2021 – Oct 2023</div>
+        <div>
+          <div class="xp-role">Senior Product Manager</div>
+          <div class="xp-co">eFishery</div>
+        </div>
+      </div>
+      <div class="xp-item">
+        <div class="xp-dates">2019 – 2020</div>
+        <div>
+          <div class="xp-role">Product Manager</div>
+          <div class="xp-co">Halofina</div>
+        </div>
+      </div>
+      <div class="xp-item">
+        <div class="xp-dates">2017 – 2018</div>
+        <div>
+          <div class="xp-role">Research Consultant / Scrum Master</div>
+          <div class="xp-co">Labtek Indie</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="kicker">Contact</div>
+      <h2>Let's talk</h2>
+      <div class="contact-box">
+        <p style="margin:0;">Happy to walk through either case study in more depth, or share the full CV.</p>
+        <a href="mailto:adriana.enge@gmail.com">adriana.enge@gmail.com</a><br>
+        <a href="https://linkedin.com/in/adrianaenge" target="_blank" rel="noopener">linkedin.com/in/adrianaenge</a>
+      </div>
+    </section>
+
+    <footer>
+      Adriana Enge — Product Leader, Indonesia.
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  const links = document.querySelectorAll('nav.index a');
+  const sections = Array.from(links).map(a => document.getElementById(a.dataset.sec));
+
+  function onScroll(){
+    let idx = 0;
+    const y = window.scrollY + 140;
+    sections.forEach((sec, i) => { if(sec && sec.offsetTop <= y) idx = i; });
+    links.forEach((a, i) => a.classList.toggle('active', i === idx));
+  }
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+</script>
+
+</body>
+</html>
